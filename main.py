@@ -58,7 +58,7 @@ if __name__ == "__main__":
             max_points_per_task = max_points[task_id]
 
             result = (current_score * max_points_per_task) / max_score
-            if result < 0: result = 0 # the endpoint can provide a negative value
+            if result < 0: result = 0.0 # the endpoint can provide a negative value
 
             sys.stdout.write("\033[2K") # clear entire line
             print(f"Task ID: {task_id}: {result}/{max_points_per_task}")
