@@ -20,7 +20,7 @@ class Eduka:
 
         return req.json()
 
-    def decode_task_data(self, task_data: json) -> dict:
+    def decode_task_data(self, task_data: dict) -> dict:
         tasks_data = json.loads(task_data["tasksData"])
         working_state = json.loads(task_data["workingState"])
         scores = json.loads(working_state["score"])
